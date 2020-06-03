@@ -1,59 +1,73 @@
-import React from "react";
-import { Grid, Typography } from "@material-ui/core";
+import React, {useState} from "react";
+import PropTypes from 'prop-types';
+import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
+
+import Login from './components/Login';
+import Dashboard from './components/Dashboard';
+
+function a11yProps(index) {
+  
+  return {
+    id: `simple-tab-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
+  };
+}
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
 
 function App() {
+  const [value, setValue] = useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <div className="App">
-      <Grid container>
-        <Grid item lg={3}></Grid>
-        <Grid item lg={6} xs={11} md={9} sm={10}>
-          <Typography>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries.
-          </Typography>
-        </Grid>
-      </Grid>
-
-      <div class="container" style={{margin:'30px', padding: '0px'}}>
-        <div class="row">
-          <div class="col-lg-3 col-md-6 col-sm-9 col-xs-11">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-9 col-xs-11">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </div>
-          <div class="col-lg-3 col-md-6 col-sm-9 col-xs-11">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
-          </div>
-        </div>
-      </div>
+      <AppBar position="static">
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="simple tabs example"
+        >
+          <Tab label="Login" {...a11yProps(0)} />
+          <Tab label="Dashboard" {...a11yProps(1)} />
+          {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
+        </Tabs>
+      </AppBar>
+      <TabPanel value={value} index={0}>
+        <Login />
+      </TabPanel>
+      <TabPanel value={value} index={1}>
+        <Dashboard />
+      </TabPanel>
+      {/* <TabPanel value={value} index={2}>
+        Item Three
+      </TabPanel> */}
     </div>
   );
 }
