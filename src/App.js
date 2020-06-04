@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import PropTypes from 'prop-types';
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 import Home from "./components/Home";
+import Login from "./components/login";
 
 // import Login from './components/Login';
 // import Dashboard from './components/Dashboard';
@@ -61,8 +62,8 @@ function App() {
           {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
-        {/* <Login /> */}
+      <TabPanel value={value} index={0} style={{backgroundColor: 'red',}}>
+        <Login />
       </TabPanel>
       <TabPanel value={value} index={1}>
         < Home/>

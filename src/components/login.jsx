@@ -6,9 +6,9 @@ const Login = (props) => {
   return (
     <Box>
       <Grid container justify="center">
-        <Grid item xs={11} lg={6} sm={10} md={8}>
-          <Card>
-            <Box p={3}>
+        <Grid item xs={11} lg={5} sm={10} md={8}>
+          {/* <Card> */}
+            {/* <Box p={3}> */}
               <Typography>
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
@@ -21,8 +21,8 @@ const Login = (props) => {
                 publishing software like Aldus PageMaker including versions of
                 Lorem Ipsum.
               </Typography>
-            </Box>
-          </Card>
+            {/* </Box> */}
+          {/* </Card> */}
         </Grid>
       </Grid>
     </Box>
