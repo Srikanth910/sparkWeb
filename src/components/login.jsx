@@ -98,10 +98,10 @@ const Login = ({ classes }) => {
               </Grid>
 
               <Typography
+              align="right"
                 style={{
                   opacity: "0.5",
                   marginTop: "10px",
-                  textAlign: "right",
                   color: "#f7931e",
                   cursor: "pointer",
                 }}

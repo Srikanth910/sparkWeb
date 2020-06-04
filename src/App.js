@@ -4,6 +4,7 @@ import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 
 import Home from "./components/Home";
 import Login from "./components/login";
+// import Dashboard from './components/Dashboard';
 import Forgotpassword from "./components/Forgotpassword";
 
 function a11yProps(index) {
