@@ -12,8 +12,8 @@ export default class Routing extends Component {
     render() {
         return (
            <Router>
-               <Route  path="Login" component={login}/>
-               <Route  path="Forgotpassword" component={Forgotpassword}/>
+               <Route  path="/Login" component={login}/>
+               <Route  path="/Forgotpassword" component={Forgotpassword}/>
            </Router>
         )
     }
