@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(1),
       width: theme.spacing(40),
-      height: theme.spacing(17),
+      height: theme.spacing(14),
       marginLeft: 16,
       justifyContent: "center",
     },
@@ -201,7 +201,8 @@ const Home = (props) => {
                   />
                   <Typography
                     style={{
-                      fontSize: 16,
+                      fontSize: 13,
+                       fontWeight:'bold',
                       color: " #474a4f",
                       margin: "0px",
                       marginLeft: 10,
@@ -214,7 +215,7 @@ const Home = (props) => {
                 <Typography
                   style={{
                     color: "#aaadb2",
-                    fontSize: 15,
+                    fontSize: '12px',
                     marginLeft: 16,
                     marginTop: 5,
                   }}
@@ -224,7 +225,7 @@ const Home = (props) => {
                 </Typography>
 
                 <div className={classes.root}>
-                  <Paper elevation={5}>
+                  <Paper elevation={8}>
                     <Typography
                       style={{
                         color: "#474a4f",
@@ -251,9 +252,9 @@ const Home = (props) => {
                     <Divider variant="middle" />
 
                     <ListItem className="d-flex justify-content-around">
-                      <Typography style={{ color: "#f7931e", fontSize: "14px" }}>LOAD</Typography>
+                      <Typography style={{ color: "#f7931e", fontSize: "10px" }}>LOAD</Typography>
                       <Typography>|</Typography>
-                      <Typography style={{ color: "#f7931e", fontSize: "14px" }}>
+                      <Typography style={{ color: "#f7931e", fontSize: "10px" }}>
                         TRANSFER
                       </Typography>
                     </ListItem>
@@ -509,9 +510,10 @@ const Home = (props) => {
                   />
                   <Typography
                     style={{
-                      fontSize: 15,
+                      fontSize: 13,
                       color: " #474a4f",
                       marginLeft: 10,
+                      fontWeight:'bold'
                     }}
                   >
                     FIXED DEPOSITS.
@@ -521,7 +523,7 @@ const Home = (props) => {
                 <Typography
                   style={{
                     color: "#aaadb2",
-                    fontSize: 15,
+                    fontSize: '12px',
                     marginLeft: 16,
                     marginTop: 5,
                   }}
@@ -559,7 +561,8 @@ const Home = (props) => {
                   />
                   <Typography
                     style={{
-                      fontSize: 14,
+                      fontSize: 13,
+                       fontWeight:'bold',   
                       color: " #474a4f",
                       marginLeft: 10,
                     }}
@@ -571,7 +574,7 @@ const Home = (props) => {
                 <Typography
                   style={{
                     color: "#aaadb2",
-                    fontSize: 15,
+                    fontSize: '12px',
                     marginLeft: 16,
                     marginTop: 5,
                   }}
