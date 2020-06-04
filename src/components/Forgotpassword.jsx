@@ -7,7 +7,7 @@ import States from "./States";
 const Forgotpassword = (props) => {
   return (
     <Grid container justify="center">
-      <Grid item xs={12} lg={4} sm={10} md={8}>
+      <Grid item xs={10} lg={3} sm={10} md={8}>
         <Paper>
           <Grid
             container
@@ -20,7 +20,7 @@ const Forgotpassword = (props) => {
               </Typography>
             </Grid>
           </Grid>
-          <Box p={3} px={8}>
+          <Box p={3} px={3}>
             <Grid container direction="column">
               <Grid item>
                 <States />

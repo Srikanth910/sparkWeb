@@ -41,7 +41,7 @@ const Login = ({ classes }) => {
 
   return (
     <Grid container justify="center">
-      <Grid item xs={12} lg={4} sm={10} md={8}>
+      <Grid item xs={10} lg={3} sm={10} md={8}>
         <Paper>
           <Grid
             container
@@ -52,12 +52,12 @@ const Login = ({ classes }) => {
               <Typography variant="h6">Watch your wealth grow</Typography>
             </Grid>
             <Grid item style={{ marginLeft: "10rem", marginTop: "2rem" }}>
-              <Typography variant="h5" align="center">
+              <Typography variant="h6" align="center">
                 Login
               </Typography>
             </Grid>
           </Grid>
-          <Box p={3} px={8}>
+          <Box p={3} px={3}>
             <Grid container direction="column">
               <Grid item>
                 <States />
@@ -115,7 +115,7 @@ const Login = ({ classes }) => {
                 <Typography>
                   By Logging in, you agree to our{" "}
                   <span style={{ color: "#f7931e" }}>Terms and Conditions</span>{" "}
-                  and <span style={{ color: "#f7931e" }}>Privacy Policy</span>
+                  & <span style={{ color: "#f7931e" }}>Privacy Policy</span>
                 </Typography>
               </Grid>
 
