@@ -4,6 +4,7 @@ import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
+import Forgotpassword from "./components/Forgotpassword";
 
 function a11yProps(index) {
   
@@ -56,7 +57,7 @@ function App() {
         >
           <Tab label="Login" {...a11yProps(0)} />
           <Tab label="Dashboard" {...a11yProps(1)} />
-          {/* <Tab label="Item Three" {...a11yProps(2)} /> */}
+          <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
@@ -65,9 +66,9 @@ function App() {
       <TabPanel value={value} index={1}>
         <Dashboard />
       </TabPanel>
-      {/* <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel> */}
+      <TabPanel value={value} index={2}>
+        <Forgotpassword />
+      </TabPanel>
     </div>
   );
 }
