@@ -4,6 +4,7 @@ import './home.css'
 import { Grid, Card,  Typography, colors, Divider, ListItem, List, Button, Paper } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
+import Footer from "./Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,7 +32,13 @@ const Home = (props) => {
           <div  >
               <div  style={{height:50, backgroundColor:'#1b1464',}}>
              <div   className="d-flex  justify-content-between header" >
-             <img src={process.env.PUBLIC_URL + "/logo.png"} className=" img-fluid"  style={{height:30, width:30, alignSelf: 'center', marginLeft:10 , marginTop:10}}  />
+                 <ListItem>
+             <img src={process.env.PUBLIC_URL + "/logo.png"} className=" img-fluid"  style={{height:30, width:30, alignSelf: 'center', marginTop:10}}  />
+             <div style={{marginLeft:'5px' ,marginTop:'10px'}}>
+                 <Typography style={{fontSize:"9px", color:'#ffffff'}}> srikanth</Typography>
+                 <Typography style={{fontSize:"9px",color:'#ffffff'}}> 1123</Typography>
+             </div>
+             </ListItem>
 
                 <img src={process.env.PUBLIC_URL + "/dots.png"} className=" img-fluid d-flex align-items-end"  style={{height:5, width:20,alignSelf: 'center',  marginRight:10,marginTop:10}}  />
 
@@ -45,7 +52,7 @@ const Home = (props) => {
                   
               </div>
               <div style={{height:'auto',backgroundColor:'#ffffff' ,marginHorizontal: 32,}}>
-              <Typography gutterBottom  style={{ fontSize:14, fontWeight:'bold' , marginLeft: 16,}}>
+              <Typography gutterBottom  style={{ fontSize:12, fontWeight:'bold' , marginLeft: 16,}}>
               MAKE THE MOST OF YOUR SPARK ACCOUNT
             </Typography>
             <Divider variant="middle" />
@@ -96,7 +103,7 @@ const Home = (props) => {
               </div>
               <div style={{height:250 , backgroundColor:'#ffffff'}}>
               <ListItem style={{height:5, marginTop: 10,}}>
-    <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:29, width:71, }}  />
+    <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:23, width:60, }}  />
     <p style={{fontSize:10, color:' #474a4f' , margin: '0px', marginLeft: 10,  }}>SAVINGS.</p>
 
     </ListItem>
@@ -242,7 +249,7 @@ Payment
 
               <div style={{height:220 , backgroundColor:'#ffffff'}}>
               <ListItem style={{height:5, marginTop: 10,}}>
-    <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:29, width:71, }}  />
+    <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:23, width:60, }}  />
     <p style={{fontSize:10, color:' #474a4f' , margin: '0px', marginLeft: 10,  }}>FIXED DEPOSITS.</p>
 
     </ListItem>
@@ -262,7 +269,7 @@ Payment
 </div>
               <div style={{height:220 , backgroundColor:'#ffffff'}}>
               <ListItem style={{height:5, marginTop: 10,}}>
-    <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:29, width:71, }}  />
+    <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:23, width:60, }}  />
     <p style={{fontSize:10, color:' #474a4f' , margin: '0px', marginLeft: 10,  }}>RECURRING DEPOSITS.</p>
 
     </ListItem>
@@ -290,10 +297,11 @@ Payment
     
 </div>
 
+
           </div>
 
 
-
+          <Footer/>
           </Paper>
         </Grid>
       </Grid>
