@@ -2,16 +2,13 @@ import React, {useState} from "react";
 import PropTypes from 'prop-types';
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
 import Home from "./components/Home";
+// import Login from "./components/login";
+
+
+// import Dashboard from './components/Dashboard';
+import Forgotpassword from "./components/Forgotpassword";
 import Login from "./components/login";
 
-<<<<<<< HEAD
-// import Login from './components/Login';
-// import Dashboard from './components/Dashboard';
-=======
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
-import Forgotpassword from "./components/Forgotpassword";
->>>>>>> f46e3e4042a2397e98dd061d1c4378487455a77b
 
 function a11yProps(index) {
   
@@ -68,7 +65,7 @@ function App() {
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0} style={{backgroundColor: 'red',}}>
+      <TabPanel value={value} index={0} >
         <Login />
       </TabPanel>
       <TabPanel value={value} index={1}>

@@ -1,8 +1,9 @@
 import React from "react";
  import './home.css'
 // import PropTypes from 'prop-types';
-import { Grid, Card, Box, Typography, colors, Divider, ListItem, List, Button, Paper } from "@material-ui/core";
+import { Grid, Card,  Typography, colors, Divider, ListItem, List, Button, Paper } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,6 +27,7 @@ const Home = (props) => {
     <Box >
       <Grid container justify="center">
         <Grid item xs={11} lg={5} sm={10} md={8}>
+        <Paper>
           <div  >
               <div  style={{height:50, backgroundColor:'#1b1464',}}>
              <div   className="d-flex  justify-content-between header" >
@@ -76,7 +78,7 @@ const Home = (props) => {
         </List>
             
             
-           <div style={{textAlign:'center', marginTop:30}}>
+           <div style={{textAlign:'center', marginTop:20}}>
         <Button variant="outlined" color="#f7931e" style={{color:'#f7931e', height:26, width: '187px', borderColor:'#f7931e'
      
         
@@ -125,17 +127,109 @@ const Home = (props) => {
               <div style={{height:20,backgroundColor:'#f5f5ff'}}>
 
               </div>
-              <div style={{height:250 , backgroundColor:'#ffffff'}}>
+              <div style={{height:'auto', backgroundColor:'#ffffff'}}>
                   <ListItem  className="d-flex justify-content-between" >
                       <p style={{color:'474a4f', fontSize:'14px'}}>BILL PAYMENT</p>
 
                       <p style={{color:'#f79d32', fontSize:'14px'}}> Transactions </p>
                   </ListItem >
 
-                  <div style={{flexDirection: 'row', flexWrap: 'wrap'}}>
-                      <div className="box">
-                           
-                      </div>
+                  <div style={{display:'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+                 
+                  <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem', borderRadius: 10, }}
+      >
+          
+         <img src={process.env.PUBLIC_URL + "/ph.png"} className=" img-fluid"  style={{height:30, width:22, marginLeft: '10px', }}  />
+          <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center'}}>
+          Mobile
+Prepaid 
+          </p>
+      </Box>
+      <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem', borderRadius: 10, }}
+      >
+          
+         <img src={process.env.PUBLIC_URL + "/ph.png"} className=" img-fluid"  style={{height:30, width:22, marginLeft: '10px', }}  />
+          <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
+          Mobile
+           postpaid 
+          </p>
+      </Box>
+      <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem', borderRadius: 10, }}
+      >
+         <img src={process.env.PUBLIC_URL + "/Broadband.png"} className=" img-fluid"  style={{height:25, width:38,marginLeft: '5px', }}  />
+        
+         <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
+         Broadband
+          </p>
+      </Box>
+      <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem', borderRadius: 10, }}
+      >
+        <img src={process.env.PUBLIC_URL + "/DTH.png"} className=" img-fluid"  style={{height:30, width:33, marginLeft: '10px',}}  />
+        <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
+         DTH
+          </p>
+      </Box>
+      <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem' , borderRadius: 10,}}
+      >
+        <img src={process.env.PUBLIC_URL + "/ele.png"} className=" img-fluid"  style={{height:35, width:35,marginLeft: '5px', }}  />
+        <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
+        Electricity
+          </p> 
+      </Box>
+      
+      <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem', borderRadius: 10, }}
+      >
+         <img src={process.env.PUBLIC_URL + "/water.png"} className=" img-fluid"  style={{height:33, width:33,marginLeft: '5px', }}  />
+         <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
+        water
+          </p>
+      </Box>
+      
+      <Box
+        boxShadow={1}
+        bgcolor="background.paper"
+        m={1}
+        p={1}
+        style={{ width: '4rem', height: '4rem' , borderRadius: 10, }}
+      >
+           <img src={process.env.PUBLIC_URL + "/payment.png"} className=" img-fluid"  style={{height:30, width:30, textAlign:'center', marginLeft: '5px', }}  />
+          
+           <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
+           Loan 
+Payment
+          </p>
+      </Box>
+      
 
                   </div>
 
@@ -177,7 +271,7 @@ const Home = (props) => {
      
 
 
-    <img src={process.env.PUBLIC_URL + "/rd_bg.png"} className=" img-fluid"  style={{height:'114px',marginLeft: 16, width:300 }}  />
+    <img src={process.env.PUBLIC_URL + "/rd_bg.png"} className=" img-fluid"  style={{height:'114px',marginLeft: 16,  }}  />
               </div>
              
 
@@ -187,7 +281,7 @@ const Home = (props) => {
 
 
 
-          
+          </Paper>
         </Grid>
       </Grid>
     </Box>
