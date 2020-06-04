@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import PropTypes from 'prop-types';
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
+import Home from "./components/Home";
 
-import Login from './components/Login';
-import Dashboard from './components/Dashboard';
+// import Login from './components/Login';
+// import Dashboard from './components/Dashboard';
 
 function a11yProps(index) {
   
@@ -48,11 +49,12 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar position="static">
+      <AppBar position="static" style={{justifyContent:'center'}}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
+           
         >
           <Tab label="Login" {...a11yProps(0)} />
           <Tab label="Dashboard" {...a11yProps(1)} />
@@ -60,10 +62,10 @@ function App() {
         </Tabs>
       </AppBar>
       <TabPanel value={value} index={0}>
-        <Login />
+        {/* <Login /> */}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Dashboard />
+        < Home/>
       </TabPanel>
       {/* <TabPanel value={value} index={2}>
         Item Three
