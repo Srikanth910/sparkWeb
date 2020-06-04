@@ -38,6 +38,7 @@ const Login = ({ classes }) => {
   };
 
   return (
+
     <Grid container justify="center">
       <Grid item xs={10} lg={3} sm={10} md={8}>
         <Paper>
@@ -130,6 +131,7 @@ const Login = ({ classes }) => {
             </Grid>
           </Box>
         </Paper>
+
       </Grid>
     </Grid>
   );

@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, {useState} from "react";
+import PropTypes from 'prop-types';
 import { AppBar, Tabs, Tab, Typography, Box } from "@material-ui/core";
-
 import Home from "./components/Home";
 import Login from "./components/login";
-// import Dashboard from './components/Dashboard';
 import Forgotpassword from "./components/Forgotpassword";
 
 function a11yProps(index) {
+  
   return {
     id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
+    'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -49,22 +47,23 @@ function App() {
 
   return (
     <div className="App">
-      <AppBar position="static" style={{ justifyContent: "center" }}>
+      <AppBar position="static" style={{justifyContent:'center'}}>
         <Tabs
           value={value}
           onChange={handleChange}
           aria-label="simple tabs example"
+           
         >
           <Tab label="Login" {...a11yProps(0)} />
           <Tab label="Dashboard" {...a11yProps(1)} />
           <Tab label="Item Three" {...a11yProps(2)} />
         </Tabs>
       </AppBar>
-      <TabPanel value={value} index={0}>
+      <TabPanel value={value} index={0} >
         <Login />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Home />
+        < Home/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <Forgotpassword />
