@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { Grid, Paper, Typography, Box, TextField, Button } from "@material-ui/core";
 
 import States from "./States";
@@ -51,7 +50,5 @@ const Forgotpassword = (props) => {
     </Grid>
   );
 };
-
-Forgotpassword.propTypes = {};
 
 export default Forgotpassword;
