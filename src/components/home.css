@@ -5,3 +5,9 @@
     border-color: antiquewhite;
 
 }
+
+.value{
+     background-color: 'red';
+     height: "20px";
+     width: "20px";
+}

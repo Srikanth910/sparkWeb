@@ -1,5 +1,5 @@
 import React from "react";
- import './home.css'
+import './home.css'
 // import PropTypes from 'prop-types';
 import { Grid, Card,  Typography, colors, Divider, ListItem, List, Button, Paper } from "@material-ui/core";
 import { makeStyles } from '@material-ui/core/styles';
@@ -26,7 +26,7 @@ const Home = (props) => {
   return (
     <Box >
       <Grid container justify="center">
-        <Grid item xs={11} lg={5} sm={10} md={8}>
+        <Grid item xs={11} lg={3} sm={10} md={8}>
         <Paper>
           <div  >
               <div  style={{height:50, backgroundColor:'#1b1464',}}>
@@ -44,7 +44,7 @@ const Home = (props) => {
               <div style={{height:'30px', backgroundColor:""}}>
                   
               </div>
-              <div style={{height:250,backgroundColor:'#ffffff' ,marginHorizontal: 32,}}>
+              <div style={{height:'auto',backgroundColor:'#ffffff' ,marginHorizontal: 32,}}>
               <Typography gutterBottom  style={{ fontSize:14, fontWeight:'bold' , marginLeft: 16,}}>
               MAKE THE MOST OF YOUR SPARK ACCOUNT
             </Typography>
@@ -134,7 +134,7 @@ const Home = (props) => {
                       <p style={{color:'#f79d32', fontSize:'14px'}}> Transactions </p>
                   </ListItem >
 
-                  <div style={{display:'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+                  <div style={{display:'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent:"center"}}>
                  
                   <Box
         boxShadow={1}
@@ -222,7 +222,7 @@ Prepaid
         p={1}
         style={{ width: '4rem', height: '4rem' , borderRadius: 10, }}
       >
-           <img src={process.env.PUBLIC_URL + "/payment.png"} className=" img-fluid"  style={{height:30, width:30, textAlign:'center', marginLeft: '5px', }}  />
+           <img src={process.env.PUBLIC_URL + "/payment.png"} className=" img-fluid"  style={{height:30, width:30, marginLeft: '5px', }}  />
           
            <p style={{fontSize:'10px', color:'#474a4f',textAlign:'center', }}>
            Loan 
@@ -240,7 +240,7 @@ Payment
 </div>
 
 
-              <div style={{height:250 , backgroundColor:'#ffffff'}}>
+              <div style={{height:220 , backgroundColor:'#ffffff'}}>
               <ListItem style={{height:5, marginTop: 10,}}>
     <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:29, width:71, }}  />
     <p style={{fontSize:10, color:' #474a4f' , margin: '0px', marginLeft: 10,  }}>FIXED DEPOSITS.</p>
@@ -250,9 +250,9 @@ Payment
     <p  style={{color:'#aaadb2', fontSize:9, marginLeft: 16,marginTop:5}}>You can earn up to 16% interest p.a. Also avail the option to earn interest on deposit every month!.</p>
      
 
-    <img src={process.env.PUBLIC_URL + "/fd_bg.png"} className=" img-fluid"  style={{height:'114px',marginLeft: 16,  }}  />
+    <img src={process.env.PUBLIC_URL + "/fd_bg.png"} className=" img-fluid"  style={{height:'114px',marginLeft: 16, width:'90%' }}  />
     
-<ListItem  className="d-flex justify-content-between"  >
+<ListItem  className="d-flex justify-content-between"   style={{marginTop:'10px'}}>
     <p style={{color:'#f7931e', fontSize:'12px'}}> OPEN NEW</p>
     <p style={{color:'#f7931e', fontSize:'12px'}}>FD RATES</p>
     </ListItem>
@@ -260,7 +260,7 @@ Payment
               <div style={{height:20,backgroundColor:'#f5f5ff'}}>
 
 </div>
-              <div style={{height:250 , backgroundColor:'#ffffff'}}>
+              <div style={{height:220 , backgroundColor:'#ffffff'}}>
               <ListItem style={{height:5, marginTop: 10,}}>
     <img src={process.env.PUBLIC_URL + "/logo_sp.png"} className=" img-fluid"  style={{height:29, width:71, }}  />
     <p style={{fontSize:10, color:' #474a4f' , margin: '0px', marginLeft: 10,  }}>RECURRING DEPOSITS.</p>
@@ -271,11 +271,24 @@ Payment
      
 
 
-    <img src={process.env.PUBLIC_URL + "/rd_bg.png"} className=" img-fluid"  style={{height:'114px',marginLeft: 16,  }}  />
+    <img src={process.env.PUBLIC_URL + "/rd_bg.png"} className=" img-fluid"  style={{height:'114px',marginLeft: 16, width:'90%' }}  />
+
+<div className="value">
+
+</div>
+    <ListItem  className="d-flex justify-content-between"  style={{marginTop: '10px',}} >
+    <p style={{color:'#f7931e', fontSize:'12px'}}> OPEN NEW</p>
+    <p style={{color:'#f7931e', fontSize:'12px'}}>Rd RATES</p>
+    </ListItem>
               </div>
              
 
+              <div style={{height:20,backgroundColor:'#f5f5ff'}}>
 
+</div>
+<div>
+    
+</div>
 
           </div>
 

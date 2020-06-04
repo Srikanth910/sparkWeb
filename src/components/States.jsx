@@ -1,12 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
-import {
-   
-    FormControl,
-    InputLabel,
-    MenuItem,
-    Select
-  } from "@material-ui/core";
+import { FormControl, InputLabel, MenuItem, Select } from "@material-ui/core";
 
 const States = (props) => {
   return (
@@ -24,7 +17,5 @@ const States = (props) => {
     </FormControl>
   );
 };
-
-States.propTypes = {};
 
 export default States;
