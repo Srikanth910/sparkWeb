@@ -12,7 +12,8 @@ import {
 import { makeStyles } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Footer from "./Footer";
-
+ import fd from '../assets/fd_bg.png'
+ import rd from '../assets/rd_bg.png'
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -24,6 +25,41 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
     },
   },
+ fd:{
+      
+     
+       width: "100%",
+       height: "120px",
+       backgroundImage: `url(${fd}) ` ,
+       backgroundRepeat: 'no-repeat',
+       backgroundPosition: 'center',
+        
+ },
+  rd:{
+    width: "100%",
+    height: "120px",
+    backgroundImage: `url(${rd}) ` ,
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+     
+
+  },
+  dotted:{
+
+    borderColor: '#ffffff',
+
+    borderRadius: 2,
+    borderWidth: 2,
+    borderStyle: 'dashed',
+    height: 67,
+    width: 160,
+    
+  
+   
+
+  }
+
+   
 }));
 const Home = (props) => {
   const classes = useStyles();
@@ -285,7 +321,7 @@ const Home = (props) => {
                     display: "flex",
                     flexDirection: "row",
                     flexWrap: "wrap",
-                    justifyContent: "center",
+                  
                   }}
                 >
                   <Box
@@ -493,7 +529,9 @@ const Home = (props) => {
                       alignContent: "center",
                     }}
                   >
-                    more
+                  <Typography style={{textAlign:'center'}}>
+                      more
+                  </Typography>
                   </Box>
                 </div>
               </div>
@@ -532,12 +570,15 @@ const Home = (props) => {
                   earn interest on deposit every month!.
                 </Typography>
 
-                <img
+                {/* <img
                   src={process.env.PUBLIC_URL + "/fd_bg.png"}
                   alt=""
                   className=" img-fluid"
                   style={{ height: "114px", marginLeft: 16, width: "90%" }}
-                />
+                /> */}
+                <div className={classes.fd}>
+
+</div>
 
                 <ListItem
                   className="d-flex justify-content-between"
@@ -582,15 +623,21 @@ const Home = (props) => {
                   Earn up to 15% p.a. with periodic investment discipline of
                   Recurring Deposits..
                 </Typography>
-
+{/* 
                 <img
                   src={process.env.PUBLIC_URL + "/rd_bg.png"}
                   alt=""
                   className=" img-fluid"
                   style={{ height: "114px", marginLeft: 16, width: "90%" }}
-                />
+                /> */}
+                <div className={classes.rd}>
+                    {/* <div className={classes.dotted} style>
 
-                <div className="value"></div>
+                    </div> */}
+
+                </div>
+
+               
                 <ListItem
                   className="d-flex justify-content-between"
                   style={{ marginTop: "10px" }}
@@ -607,6 +654,9 @@ const Home = (props) => {
 
               <div style={{ height: 20, backgroundColor: "#f5f5ff" }}></div>
               <div></div>
+
+              
+              
             </div>
 
             <Footer />
